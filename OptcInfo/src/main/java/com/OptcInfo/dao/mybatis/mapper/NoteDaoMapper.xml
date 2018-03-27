@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.OptcInfo.dao.NoteDao">
+  
+ 	<!-- <select id="getList" resultType="com.maven.entity.Note">
+ 		select * from Note
+ 		limit ${(_parameter-1)*15},15
+ 	</select> -->
+  
+  	<select id="get" resultType="com.OptcInfo.entity.Note">
+  		select * from Note where id=#{id}
+  	</select>
+  	
+  	<insert id="insert" parameterType="com.OptcInfo.entity.Note">
+  		insert into Note(title,content,writerId)
+  		values(#{title},#{content},#{writerId})
+  	</insert>
+  	
+  	<update id="update">
+  	
+  	</update>
+</mapper>
