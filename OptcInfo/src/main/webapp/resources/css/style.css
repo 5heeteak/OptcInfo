@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* -------------------tag reset----------------- */
+
+button{
+	background: transparent;
+	border: none;
+}
+
+/* -------------------tag cascade----------------- */
+
+/* -------------------.header----------------- */
+
+/* -------------------.main----------------- */
+section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-around;
+	transform: translate(0px,8em);
+}
+
+section > button{
+	
+	width: 11em;
+	height: 12em;
+	background-color: aqua;
+	border-radius: 20px;
+	margin-bottom: 1em;
+}
