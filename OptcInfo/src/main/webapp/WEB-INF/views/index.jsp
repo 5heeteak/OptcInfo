@@ -10,15 +10,15 @@
 <link href="resources/css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-	<main class="main">
+	<header>
+		<button class="menu">&#9776;</button>
+	</header>
+	<main>
 		<section>
-			<button type="button" value="">1</button>
-			<button type="button" value="">1</button>
-			<button type="button" value="">1</button>
-			<button type="button" value="">1</button>
-			<button type="button" value="">1</button>
-			<button type="button" value="">1</button>
+			<div>
+			</div>
 		</section>
 	</main>
+	
 </body>
 </html>

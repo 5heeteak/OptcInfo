@@ -21,9 +21,9 @@ section{
 
 section > button{
 	
-	width: 11em;
-	height: 12em;
-	background-color: aqua;
+	width: 10em;
+	height: 9em;
+	background-color: #13ecc6;
 	border-radius: 20px;
 	margin-bottom: 1em;
 }
