@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* -------------------tag reset----------------- */
+html{
+	height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0px;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+/* -------------------tag cascade----------------- */
+.hidden{
+	display: none;
+}
+
+
+/* -------------------.header----------------- */
+.header{
+		height: 45px;
+		width: 100%;
+		position: fixed;
+		background: #ffffff;
+		border-bottom: 1px solid #666666;
+}
+	.header > h1{
+		font-size: 14px;
+		height: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+
+.main-menu{
+		position: relative;
+		top: -45px;
+	}
+		.main-menu ul{
+			display: flex;
+			justify-content: space-between;
+		}
+		
+			.main-menu li,
+			.main-menu li a{
+				width: 45px;
+				height: 45px;
+				display: flex;
+				justify-content: center;
+			}
+			
+				.main-menu li a img{
+					width: 24px;
+					height: 24px;
+					align-self: center;
+					
+				}
+.menu{
+	position: relative;
+	top:-45px;
+	left: -5px;
+}
+
+	.menu > ul{
+		display: flex;
+		justify-content: space-between;
+	}
+		.menu li,
+		.menu li a{
+			width: 45px;
+			height: 45px;
+			display: flex;
+			justify-content: center;
+		}
+		
+			.menu li a img{
+				width: 36px;
+				height: 36px;
+				align-self: center;
+				
+			}
+

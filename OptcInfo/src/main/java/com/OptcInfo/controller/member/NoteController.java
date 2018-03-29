@@ -37,7 +37,7 @@ public class NoteController
 		List<Note> notes = service.getList(page);
 		model.addAttribute("notes", notes);
 		
-		return"member/note/list";
+		return"member.note.list";
 		
 	}
 	
@@ -48,13 +48,13 @@ public class NoteController
 		
 		model.addAttribute("note", note);
 		
-		return"member/note/detail";
+		return"member.note.detail";
 	}
 	
 	@RequestMapping(value="reg", method=RequestMethod.GET)
 	public String reg()
 	{
-		return"member/note/reg";
+		return"member.note.reg";
 	}
 	
 	@RequestMapping(value="reg", method=RequestMethod.POST)
@@ -97,10 +97,21 @@ public class NoteController
 	}
 	
 	
-	@RequestMapping("edit")
-	public String edit()
+	@RequestMapping(value="list/{id}/edit", method=RequestMethod.GET)
+	public String edit(@PathVariable("id") Integer id,Model model)
 	{
-		return"member/note/edit";
+		
+		Note note = service.get(id);
+		
+		model.addAttribute("note", note);
+		
+		return"member.note.edit";
+	}
+	
+	@RequestMapping(value="edit", method=RequestMethod.POST)
+	public String edit(Note note)
+	{
+		return"redirect:list";
 	}
 	
 	@RequestMapping("filess")
