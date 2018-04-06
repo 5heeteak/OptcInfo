@@ -22,15 +22,28 @@
 				<!-- <li><a href=""><img src=""></a></li> -->
 			</ul>
 		</nav>
+		</header>
 		<nav class="menu hidden">
+			<ul class="main-menu-btn">
+				<c:forEach begin="0" end="4">
+				<li class="menu-btn">
+					<img src="resources/img/icon/menu.png"/>
+					
+				</li>
+				</c:forEach>
+			</ul>
+			
+		</nav>
+		
+		<input type="button" class="bts" value="버튼"/>
+		<nav class="sub-menu hidden">
 			<ul>
-				<li><a href=""><img src="resources/img/icon/test.png"/></a></li>
-				<li><a href=""><img src="resources/img/icon/test.png"/></a></li>
-				<li><a href=""><img src="resources/img/icon/test.png"/></a></li>
-				<li><a href=""><img src="resources/img/icon/test.png"/></a></li>
-				<li><a href=""><img src="resources/img/icon/test.png"/></a></li>
+				<c:forEach begin="0" end="3">
+					<li><img src="resources/img/icon/submenu.png" /></li>
+				</c:forEach>
 			</ul>
 		</nav>
+		
 </body>
 </html>
 
@@ -40,16 +53,28 @@ window.addEventListener("load",function(evnet){
 	
 	var mainMenu = document.querySelector(".main-menu>ul li");
 	var menu = document.querySelector(".menu");
+	var menuBtn = document.querySelector(".menu-btn>img");
+	var subMenu = document.querySelector(".sub-menu");
+	var buttons = document.querySelector(".bts");
 	var cnt = 0;
+	var cnt1 = 0;
 	
 	mainMenu.onclick = function(e)
 	{	
 		cnt = cnt + 1;
 		if(cnt % 2 == 1)
+		{
 			menu.classList.remove("hidden");
+			
+			
+			
+		}
 		else
 			menu.classList.add("hidden");
 	};
+	
+	
+	
 });
 
 </script>

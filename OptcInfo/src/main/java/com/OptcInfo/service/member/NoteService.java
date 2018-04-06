@@ -2,6 +2,7 @@ package com.OptcInfo.service.member;
 
 import java.util.List;
 
+import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -16,6 +17,19 @@ public class NoteService
 	public List<Note> getList(Integer page) 
 	{
 		List<Note> list = noteDao.getList(page);
+		
+		for(Note n : list)
+		{
+			String content = n.getContent();
+			
+			if(content == null) continue;
+			
+			String text = Jsoup.parse(content).text();
+			
+			if(text.length() > 250)
+				text = text.substring(0, 200);
+			n.setContent(text);
+		}
 		
 		return list;
 	}
