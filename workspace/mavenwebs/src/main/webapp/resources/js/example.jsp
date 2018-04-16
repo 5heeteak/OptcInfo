@@ -41,7 +41,27 @@ initial-scale=1,minimum-scale=1, user-scalable=1">
 				<option>hanbit</option>
 				<option>answeris</option>
 			</datalist>
-			<input class="btn btn-default" type="button" value="확인" />
+			<input class="btn btn-default btn-ok" type="button" value="확인" />
+			<input class="btn btn-default btn-toggle" type="button" value="토글" />
+		</div>
+	</section>
+	
+	<section id="ex4" class="example">
+		<h1>효과주기 예제</h1>
+		<div class="text-align-center">
+			<img src="img/mybatis.png" />
+		</div>
+		<div>
+			<input class="input" type="text" list="img-list" />
+			<datalist id="img-list">
+				<option>ssy</option>
+				<option>mybatis</option>
+				<option>donut</option>
+				<option>hanbit</option>
+				<option>answeris</option>
+			</datalist>
+			<input class="btn btn-default btn-ok" type="button" value="확인" />
+			<input class="btn btn-default btn-toggle" type="button" value="토글" />
 		</div>
 	</section>
 </body>

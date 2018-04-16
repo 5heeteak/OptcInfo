@@ -37,7 +37,7 @@
 				<a href="${ctx}/member/login" >로그인</a>
 			</li>
 			<li>
-				<a href="${ctx}/logout" >로그아웃</a>
+				<a href="${ctx}/member/logout" >로그아웃</a>
 			</li>
 		</ul>
 	</nav>

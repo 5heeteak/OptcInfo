@@ -169,12 +169,12 @@ body {
 .example{
    padding:20px;
    border-bottom: 2px solid #929292;
+   text-align: center;
 }
 
 .example > h1{
    font-size:16px;
    font-weight: bold;
-   text-align: center;
    border-bottom: 1px dotted #929292;
    margin-bottom: 20px;
 }
@@ -194,7 +194,11 @@ body {
    border-radius: 5px; 
 }
 
-
+.zoom-in{
+	width: 300px;
+	height: 100px;
+	box-shadow: #979797 3px 3px 3px;
+}
 
 
 

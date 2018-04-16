@@ -1,5 +1,8 @@
 package com.mavenwebs.config;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -7,11 +10,15 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
 public class MavenwebsSecurityConfig extends WebSecurityConfigurerAdapter
 {
+	/*@Autowired
+	private DataSource dataSource;*/
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception 
 	{
@@ -51,7 +58,13 @@ public class MavenwebsSecurityConfig extends WebSecurityConfigurerAdapter
 		//spring5 이상에서 사용
 		UserBuilder users = User.builder();
 		
-		auth.inMemoryAuthentication()
+		auth
+				/*.jdbcAuthentication()
+				.dataSource(dataSource)
+				.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
+				.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
+				.passwordEncoder(new BCryptPasswordEncoder());*/
+				.inMemoryAuthentication()
 				.withUser(users.username("snoopy").password("{noop}1234").roles("ADMIN"))
 				.withUser(users.username("snonopy").password("{noop}1234").roles("AUTHOR"));
 		

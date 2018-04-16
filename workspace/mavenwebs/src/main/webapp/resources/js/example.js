@@ -37,28 +37,84 @@ $(function()
 
 $(function()
 {
-	var okBtn = $("#ex3 .btn-default");
+	var okBtn = $("#ex3 .btn-ok");
 	var img =$("#ex3 img");
 	var textBox = $("#ex3 input[type=text]");
-
+	var toggleBtn =$("#ex3 .btn-toggle");
 	
 	okBtn.click(function(){
 		//img.attr("src","img/1234.png");
 		//var imgName = textBox.attr("val");
-		var imgName = textBox.val();
-		img.attr("src","img/"+ imgName +".png");
+		/*var imgName = textBox.val();
+		img.attr("src","img/"+ imgName +".png");*/
 		
+		//스타일 한번에 적용
 		/*img.css("width", "300px");
 		img.css("height", "100px");
 		img.css("box-shadow", "#979797 3px 3px 3px");*/
 		
-		var imgStyle = {
+	/*	var imgStyle = {
 				width: "300px",
 				height: "100px",
 				"box-shadow": "#979797 3px 3px 3px"
 		};
 		
-		img.css(imgStyle);
+		img.css(imgStyle);*/
+		
+		//정적 스타일 변경
+		
+		img.addClass("zoom-in");
+	});
+	
+	toggleBtn.click(function()
+	{
+		if(img.hasClass("zoom-in"))
+			img.removeClass("zoom-in");
+		else
+			img.addClass("zoom-in");
+		
 	});
 
 });
+
+
+//example 4 - 효과주기
+
+$(function()
+{
+	var okBtn = $("#ex4 .btn-ok");
+	var img =$("#ex4 img");
+	
+	okBtn.click(function()
+	{
+		//1.css 변화에 duration
+		/*var imgStyle = 
+		{
+				width: "300px",
+				height: "100px",
+				"box-shadow": "#979797 3px 3px 3px"
+		};
+		
+		img.animate(imgStyle,50000);*/
+		
+		//2. css의변화에 순서를 주기
+		img.animate({
+			width:"200px"
+		})
+		.animate({
+			heigth:"100px"
+		});
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
