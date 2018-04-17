@@ -7,4 +7,5 @@ public interface MemberDao
 
 	int insert(Member member);
 
+
 }

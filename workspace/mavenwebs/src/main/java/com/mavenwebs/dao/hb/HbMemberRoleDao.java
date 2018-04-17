@@ -9,26 +9,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.mavenwebs.dao.MemberDao;
+import com.mavenwebs.dao.MemberRoleDao;
 import com.mavenwebs.entity.Member;
 
 
 @Repository
-public class HbMemberDao implements MemberDao
+public class HbMemberRoleDao implements MemberRoleDao
 {
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	@Override
-	public int insert(Member member) 
+	public String getDefaultRoleByMemberId(String memberId) 
 	{
 		Session session = sessionFactory.getCurrentSession();
 		
-		session.save(member);
 		
-		return 1;
+		return null;
 	}
-
-	
 	
 	
 

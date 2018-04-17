@@ -83,7 +83,9 @@ $(function()
 $(function()
 {
 	var okBtn = $("#ex4 .btn-ok");
-	var img =$("#ex4 img");
+	var cssBtn = $("#ex4 .btn-css");
+	var img1 =$("#ex4 img:nth-child(1)");
+	var img2 =$("#ex4 img:nth-child(2)");
 	
 	okBtn.click(function()
 	{
@@ -97,12 +99,47 @@ $(function()
 		
 		img.animate(imgStyle,50000);*/
 		
+		
 		//2. css의변화에 순서를 주기
-		img.animate({
+	/*	img1.animate({
 			width:"200px"
 		})
 		.animate({
 			heigth:"100px"
+		})
+		});*/
+		/*img2
+			.delay(800)
+			.animate({
+			width:"200px",
+			height:"100px"
+		});*/
+		
+		
+		//3. callback 
+		img1.animate({
+			width:"200px"
+		},function(){
+			img2
+			.animate({
+				width:"200px",
+				height:"200px"
+			});	
+		})
+		.animate({
+			height:"200px"
+		},2000);
+		
+		
+	});
+	
+	cssBtn.click(function(){
+		img1
+		.css({
+			width:"300px"
+		})
+		.css({
+			height:"200px"
 		});
 	});
 });

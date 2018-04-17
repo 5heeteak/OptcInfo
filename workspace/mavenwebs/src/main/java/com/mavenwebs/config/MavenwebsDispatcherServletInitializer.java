@@ -16,6 +16,8 @@ public class MavenwebsDispatcherServletInitializer
 		
 		return new Class[]
 				{
+						HibernateConfig.class,
+						MavenwebsLoginSuccessHandler.class,
 						MavenwebsSecurityConfig.class	
 				};
 	}
@@ -28,7 +30,6 @@ public class MavenwebsDispatcherServletInitializer
 		return new Class[] 
 		{
 			ServletContextConfig.class,
-			HibernateConfig.class,
 			TilesCofig.class,
 			MavenwebsMvcConfig.class
 				

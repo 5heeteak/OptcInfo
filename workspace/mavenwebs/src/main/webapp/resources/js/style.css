@@ -29,6 +29,11 @@ table{
    table-layout: fixed;
 }
 
+/* img{
+	width: 100px;
+	height: 80px;
+} */
+
 /*--- common style -----------------------------------------------------------*/
 * {
    box-sizing: border-box;
@@ -200,5 +205,8 @@ body {
 	box-shadow: #979797 3px 3px 3px;
 }
 
+.animate{
+	trasition: 4000ms;
+}
 
 
